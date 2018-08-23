@@ -17,7 +17,7 @@ class App < Sinatra::Base
     erb :display_puppy
   end
 
-  post '/display_puppy' do
+  get '/display_puppy' do
     puppy = Puppy.all.last
     puts puppy
     @name = puppy.name
