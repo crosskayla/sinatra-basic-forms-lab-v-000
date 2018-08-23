@@ -18,6 +18,7 @@ class App < Sinatra::Base
 
   post '/display_puppy' do
     puppy = Puppy.all.last
+    puts puppy
     @name = puppy.name
     @breed = puppy.breed
     @age = puppy.age
